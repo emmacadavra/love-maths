@@ -28,6 +28,8 @@ function runGame(gameType) {
 
     if (gameType === "addition") {
         displayAdditionQuestion(num1, num2);
+    } else if (gameType === "subtract") {
+        displaySubtractQuestion(num1, num2);
     } else if (gameType === "multiply") {
         displayMultiplyQuestion(num1, num2);
     } else {
@@ -49,7 +51,7 @@ function checkAnswer() {
         alert("Yay! You got it right! :D");
         incrementScore();
     } else {
-        alert(`Boo! You answered ${userAnswer}. The correct answer was ${calculatedAnswer[0]}!`);
+        alert(`Boo :( You answered ${userAnswer}. The correct answer was ${calculatedAnswer[0]}!`);
         incrementWrongAnswer();
     }
 
@@ -67,6 +69,8 @@ function calculateCorrectAnswer() {
 
     if (operator === "+") {
         return [operand1 + operand2, "addition"]
+    } else if (operator === "-") {
+        return [operand1 - operand2, "subtract"]
     } else if (operator === "x") { 
         return [operand1 * operand2, "multiply"]
     } else {
@@ -102,7 +106,9 @@ function displayAdditionQuestion(operand1, operand2) {
 }
 
 function displaySubtractQuestion(operand1, operand2) {
-    
+    document.getElementById("operand-one").textContent = operand1 > operand2 ? operand1 : operand2;
+    document.getElementById("operand-two").textContent = operand1 > operand2 ? operand2 : operand1;
+    document.getElementById("operator").textContent = "-";
 }
 
 function displayMultiplyQuestion(operand1, operand2) {
