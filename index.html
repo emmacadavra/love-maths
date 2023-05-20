@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5c4866c8e7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Document</title>
 </head>
@@ -16,7 +15,21 @@
     </h1>
 
     <div class="game-area">
-
+        <div class="controls-area">
+            <button class="btn btn-big btn-green"><i class="fa-solid fa-plus"></i></button>
+            <button class="btn btn-big btn-blue"><i class="fa-solid fa-minus"></i></button>
+            <button class="btn btn-big btn-orange"><i class="fa-solid fa-xmark"></i></button>
+            <button class="btn btn-big btn-red"><i class="fa-solid fa-divide"></i></button>
+        </div>
+        <div class="question-area">
+            <span id="operand-one">0</span>
+            <span id="operator">x</span>
+            <span id="operand-two">0</span>
+            <span>=</span>
+            <p class="answer-message">Enter Answer:</p>
+            <input id="answer-box" type="number">
+            <button class="btn btn-grey">Submit Answer</button>
+        </div>
     </div>
 
     <div class="score-area">
